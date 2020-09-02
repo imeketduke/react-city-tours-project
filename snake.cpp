@@ -61,24 +61,12 @@ void Kartina(){
 	cout<<"\n\n\n\n\ Score: "<< score<<endl;
 }
 void Input(){
-	if(_kbhit()){
-		switch(_getch()){
-			case 'a':
-				dir = LEFT;
-				break;
-			case 'd':
-				dir = RIGHT;
-				break;
-			case 'w':
-				dir = UP;
-				break;
-			case 's':
-				dir = DOWN;
-				break;
-			case 'x':
-				gameOver = true;
-				break;
-		}
+	if(_kbhit()){	
+		if(_getch()=='a') dir = LEFT;
+		else if(_getch()=='d') dir = RIGHT;
+		else if(_getch()=='w') dir = UP;
+		else if(_getch()=='s') dir = DOWN;
+		else if(_getch()=='x') gameOver = true;
 	}
 }
 void Logic(){
